@@ -1,33 +1,14 @@
 import React, {Component} from 'react';
+import TableHeader from './TableHeader';
+import TableBody from './TableBody';
 
 class Table extends Component {
     render() {
+        const { characterData } = this.props;
         return (
             <table>
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Job</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Charlie</td>
-                        <td>Janitor</td>
-                    </tr>
-                    <tr>
-                        <td>Mac</td>
-                        <td>Bouncer</td>
-                    </tr>
-                    <tr>
-                        <td>Dee</td>
-                        <td>Bird impersonator</td>
-                    </tr>
-                    <tr>
-                        <td>Dennis</td>
-                        <td>Bartender</td>
-                    </tr>
-                </tbody>
+               <TableHeader />
+               <TableBody characterData = { characterData } />
             </table>
         )
     }
